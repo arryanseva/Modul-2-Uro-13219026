@@ -29,3 +29,56 @@ float riemankanan(float bawah, float lebar, float atas,float rumus, float pembil
         return(rumus + riemankanan(x,lebar,atas,0,0,0,0,0,0));
     }
 }
+float penjumlahan(float a, float b);
+float penjumlahan(float a, float b){
+    printf("Hasilnya adalah : %0.3f \n",(a + b));
+    return(a+b);
+}
+float pengurangan(float a, float b);
+float pengurangan(float a, float b){
+    printf("Hasilnya adalah : %0.3f \n",(a - b));
+    return(a-b);
+}
+float pembagian(float a, float b);
+float pembagian(float a, float b){
+    printf("Hasilnya adalah : %0.3f \n",(a / b));
+    return(a/b);
+}
+float perkalian(float a, float b);
+float perkalian(float a, float b){
+    printf("Hasilnya adalah : %0.3f \n",(a * b));
+    return(a*b);
+}
+float pangkat(float a, float b);
+float pangkat(float a, float b){
+    if (b < 1){
+      return(1);
+    }
+    else{
+      return(a * pangkat(a,(b-1)));
+    }
+}
+int main()
+{   
+    c = 'Y';
+    hasil = 0;
+    printf("Apakah ingin menggunakan kalkulator? (Y/N) \n");
+    scanf("%c", &c);
+    while (c == 'Y')
+    {
+      printf("Masukkan angka untuk operasi yang diinginkan (a (default = 0) <operator> b):\n");
+      printf("1. Penjumlahann \n");
+      printf("2. Pengurangan\n");
+      printf("3. Perkalian\n");
+      printf("4. Pembagian\n");
+      printf("5. Pangkat\n");
+      printf("6. Integral dari fungsi ((10 * x * x) - (7 * x * sin(x))) : (x*x + x + 1) \n");
+      scanf("%f", &operator );
+      if (operator == 1)
+      {
+        printf("Masukkan nilai penjumlahan (b) \n");
+        scanf("\n %f", &b );
+        hasil = penjumlahan(hasil,b);
+      }
+      else if (operator == 2)
+      {
